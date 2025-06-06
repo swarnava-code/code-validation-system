@@ -2,21 +2,18 @@ package com.swarna.code;
 
 import com.swarna.code.expectedImpl.SummationOfOdd;
 import com.swarna.code.expectedImpl._207CourseScheduleSolved;
-import com.swarna.code.practiceImpl.PracticeSummationOfOdd;
 import com.swarna.code.practiceImpl._207CourseSchedulePractice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-class _207CourseScheduleSolvedTest {
+class _399EvaluateDivisionTest {
     private static final Logger logger = Logger.getLogger(SummationOfOdd.class.getName());
-    private _207CourseScheduleSolved solved  = new _207CourseScheduleSolved();
+    private _207CourseScheduleSolved solved = new _207CourseScheduleSolved();
     private _207CourseSchedulePractice practice = new _207CourseSchedulePractice();
 
     @ParameterizedTest
@@ -24,7 +21,7 @@ class _207CourseScheduleSolvedTest {
     void Test(int n, int[][] preReq) {
         boolean expected = solved.canFinish(n, preReq);
         boolean actual = practice.canFinish(n, preReq);
-        logger.info("expected="+expected+", actual="+actual);
+        logger.info("expected=" + expected + ", actual=" + actual);
         Assertions.assertEquals(expected, actual);
     }
 
